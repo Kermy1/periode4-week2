@@ -18,6 +18,9 @@ public class PlayWithRemote{
 
         IncreaseVolume volumeCommand = new IncreaseVolume(newDevice);
         b.execute(volumeCommand);
+        b.execute(volumeCommand);
+        b.execute(volumeCommand);
+        b.undo(volumeCommand);
 
         // create another concrete command
         TurnTVOff offCommand = new TurnTVOff(newDevice);

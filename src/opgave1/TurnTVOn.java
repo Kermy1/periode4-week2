@@ -13,4 +13,9 @@ public class TurnTVOn implements Command {
 
         myDevice.on();
     }
+
+    @Override
+	public void undo() {
+    	myDevice.off();
+	}
 }

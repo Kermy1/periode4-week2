@@ -12,4 +12,9 @@ public class DecreaseVolume implements Command {
 		myDevice.volumeDown();
 	}
 
+	@Override
+	public void undo() {
+		myDevice.volumeUp();
+	}
+
 }
