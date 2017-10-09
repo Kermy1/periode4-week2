@@ -24,7 +24,7 @@ public class Television implements ElectronicDevice {
 
     }
 
-    public void volumenDown() {
+    public void volumeDown() {
 
         volume--;
 

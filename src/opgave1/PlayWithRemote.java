@@ -5,7 +5,7 @@ public class PlayWithRemote{
     public static void main(String[] args){
 
         // create command receiver
-        ElectronicDevice newDevice = RemoteControl.getDevice();
+        ElectronicDevice newDevice = RemoteControl.getDevice("stereo");
 
         // create a concrete command, register the receiver
         TurnTVOn onCommand = new TurnTVOn(newDevice);
@@ -15,6 +15,9 @@ public class PlayWithRemote{
 
         // invoke command
         b.execute(onCommand);
+
+        IncreaseVolume volumeCommand = new IncreaseVolume(newDevice);
+        b.execute(volumeCommand);
 
         // create another concrete command
         TurnTVOff offCommand = new TurnTVOff(newDevice);
