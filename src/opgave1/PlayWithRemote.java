@@ -20,7 +20,7 @@ public class PlayWithRemote{
         b.execute(volumeCommand);
         b.execute(volumeCommand);
         b.execute(volumeCommand);
-        b.undo(volumeCommand);
+        b.undo();
 
         // create another concrete command
         TurnTVOff offCommand = new TurnTVOff(newDevice);
